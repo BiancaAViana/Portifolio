@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Bianca A. Viana">
+  <meta name="description" content="portifolio de Bianca A. Viana">
+  <meta name="keywords" content="portifolio, front-end, html, css, javascript">
+  <title>Bianca Viana</title>
+  <!--Font- Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/d2974265d5.js" crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- scripts -->
+  <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="hamburger active"><i class="fa-solid fa-bars"></i></div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home container show" id="home">
+
+      <div class="img-wrapper">
+        <img src="images/me-350.png" alt="foto de Bianca A Viana.">
+      </div>
+
+      <div class="content">
+
+        <div class="text">
+
+          <h1 class="heading">
+            Bianca <span>Viana.</span>
+          </h1>
+
+          <p>Desenvolvedora Front-End.</p>
+          <p>Desenvolvo sistemas Front-End focados em criar um ambiente intuitivo e amigável para o
+            usuário. Sou apaixonada por tecnologia e por criar soluções que possam melhorar a vida das pessoas.</p>
+        </div>
+
+        <div class="button">
+
+          <a href="https://www.linkedin.com/in/bianca-albuquerque-687a45129/" target="_blank">
+            <button type="button" id="linkedin-btn"><i class="fa-brands fa-linkedin"> Linkedin</i></button>
+          </a>
+
+          <a href="https://github.com/BiancaAViana" target="_blank" rel="noopener noreferrer">
+            <button type="button" id="github-btn"><i class="fa-brands fa-github">GitHub</i></button>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="about container show" id="about-me">
+
+      <div class="heading">
+        <h2><span>Sobre</span> mim</h2>
+      </div>
+
+      <div class="resume">
+        <p>Sempre gostei de mexer com web design e ferramentas de edição e ja fiz alguns trabalhos
+          <span>freelancer</span> como <span>social media</span> e <span>designer</span>, porém foi em 2021 depois de
+          uma conversa com um amigo programador que os meus olhos se abriram para a programação, particularmente para a
+          <span>programação web</span>. Eu descobri algo que me motiva a aprender uma coisa nova e a pratica-la todos os
+          dias.
+        </p>
+        <br>
+        <p>Atualmente estou a procura da minha primeira oportunidade de emprego como <span>desenvolvedora front-end
+            junior</span>.</p>
+      </div>
+
+      <div class="personal-info">
+        <h3>Informações pessoais:</h3>
+        <ul>
+          <li>
+            <label>idade:</label>
+            <br>
+            25 anos
+          </li>
+          <li>
+            <label>Endereço:</label>
+            <br>
+            Nova Iguaçu, Rio de Janeiro - Brazil
+          </li>
+          <li>
+            <label>Idioma:</label>
+            <br>
+            Português, Inglês
+          </li>
+          <li>
+            <label>Formação:</label>
+            <br>
+            Degree Web Full Stack - <a href="src/Certificado-Web-Full-Stack-Degree.pdf" target="_blank">Ada Tech</a>
+          </li>
+          <li>
+            <label>Email:</label>
+            <br>
+            bianca.albuquerquev@hotmail.com
+          </li>
+        </ul>
+      </div>
+
+
+      <a href="src/Curriculum-Vitae.pdf" download="CV_BiancaAViana">
+        <button type="button">
+          Baixar CV<i class="fa-sharp fa-solid fa-file-arrow-down"></i></button>
+      </a>
+
+   
+
+    </section>
+
+
+    <section class="skills container show" id="skills">
+
+      <div class="heading">
+        <h2>Habilidades</h2>
+      </div>
+
+      <div class="content">
+        <div><i class="fa-brands fa-html5"></i>HTML</div>
+        <div><i class="fa-brands fa-css3-alt"></i>CSS</div>
+        <div><i class="fa-brands fa-js"></i>JavaScript</div>
+        <div><i class="fa-brands fa-react"></i>React</div>
+        <div><i class="fa-brands fa-node"></i>Node Js</div>
+        <div>Em Breve...</div>
+      </div>
+
+    </section>
+
+    <section class="projects container show" id="projects">
+
+
+      <div class="heading">
+        <h2>Projetos</h2>
+      </div>
+
+      <div class="box-container">
+
+        <div class="box">
+          <div class="thumbnail">
+            <img src="images/thumb-flower-shop.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <a href="#">
+              <p class="project-heading">
+                E-commerce: Flower-Shop
+              </p>
+            </a>
+
+            <p class="project-description">Uma loja virtual para venda de flores. Projeto feito utilizando html, css e
+              javascript.</p>
+          </div>
+        </div>
+
+         <div class="box">
+          <div class="thumbnail">
+          </div>
+
+          <div class="content">
+            <p class="project-heading">Em Breve</p>
+            <p class="project-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, assumenda.
+            </p>
+          </div>
+        </div> <!---->
+
+        <!-- <div class="box">
+          <div class="thumbnail">
+          </div>
+
+          <div class="content">
+            <p class="project-heading">Em Breve</p>
+            <p class="project-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, assumenda.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="thumbnail">
+          </div>
+
+          <div class="content">
+            <a href="#" class="project-heading">Em Breve</a>
+            <p class="project-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, assumenda.
+            </p>
+          </div>
+        </div> -->
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="credits">
+      <p>Desenvolvido por: <a href="https://www.linkedin.com/in/bianca-albuquerque-687a45129/"
+          target="_blank"><span>Bianca A. Viana</span></a></p>
+    </section>
+  </footer>
+</body>
+
+</html>
