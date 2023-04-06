@@ -34,6 +34,20 @@ body {
     text-transform: uppercase;
 }
 
+/*---- scroll ----*/
+.home,
+.about,
+.skills,
+.projects {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+/*---- menu ----*/
 header {
     width: 100%;
     padding: .5rem 1rem;
@@ -47,17 +61,17 @@ header {
     z-index: 999;
 }
 
-.hamburger {
+.navbar .hamburger {
     display: block;
 
     z-index: 999;
     position: relative;
 
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: #151720;
 }
 
-.menu {
+.navbar .menu {
     height: 100vh;
     margin: 0;
     width: 100%;
@@ -78,41 +92,49 @@ header {
     background-color: #fff;
 }
 
-.menu li {
+.navbar .menu li {
     padding: 1rem 4rem;
 
     border-top: 1px solid #151720;
     font-weight: bold;
-
     font-size: 1.5rem;
 }
 
-.menu li:last-child {
+.navbar .menu li:last-child {
     border-bottom: 1px solid #151720;
 }
 
-.menu li a:hover {
+.navbar .menu li a:hover {
     color: #f8930f;
 }
 
-.menu li a {
+.navbar .menu li a {
     display: block;
 
     color: #151720;
     text-decoration: none;
 }
 
-.menu.active {
+.navbar .menu.active {
     left: 0
 }
+
+/*----home----*/
 
 .home {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 4rem;
+}
+
+.home .img-wrapper img {
+    width: 300px;
+    padding: .2rem;
+
+    border: 4px solid #f8930f;
+    border-radius: 50%;
 }
 
 .home .content {
@@ -124,7 +146,7 @@ header {
     gap: 4rem;
 }
 
-.home .content .text{
+.home .content .text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,15 +161,16 @@ header {
 }
 
 .home .content .text p:nth-child(2) {
-    font-size: 2rem;
     margin-bottom: 4rem;
+
+    font-size: 2rem;
     color: #f8930f;
     font-weight: bold;
-
 }
 
 .home .content .text span {
     padding: 0 .7rem;
+
     background: #f8930f;
     color: #151720;
 }
@@ -156,47 +179,43 @@ header {
     display: flex;
 
     gap: 2rem;
-
 }
 
-.home .content .button button {
+.home .content .button a button {
     padding: 1.5rem;
+
     border-radius: 5px;
 }
 
-.home .content .button button:hover {
+.home .content .button a button:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
 
-.home .content .button #linkedin-btn {
+.home .content .button a #linkedin-btn {
     background-color: #f8930f;
+    border: 2px solid #f8930f;
 }
 
-.home .content .button #github-btn {
+.home .content .button a #github-btn {
     border: 2px solid #f8930f;
     background: #fff;
 }
 
-.home .img-wrapper img{
-    width: 300px;
-}
 
+/*---- about ----*/
 .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /**/
     align-items: center;
     gap: 10rem;
-
-    font-size: 1.5rem;
 
     position: relative;
     z-index: 1;
 
-
+    font-size: 1.5rem;
 }
 
 .about .heading {
@@ -204,20 +223,16 @@ header {
 }
 
 .about .heading span {
-
     text-decoration: underline 6px #f8930f;
-    /* color: #f8930f; */
 }
 
 .about .resume {
     text-align: justify;
-
 }
 
 .about .resume span {
     font-weight: bold;
     color: #f8930f;
-
 }
 
 .about .personal-info h3 {
@@ -228,15 +243,15 @@ header {
     margin: 1rem 0;
 }
 
-.about .personal-info li:last-child {
+.about .personal-info ul li:last-child {
     word-break: break-all;
 }
 
-.about ul li label {
+.about .personal-info ul li label {
     font-weight: bold;
 }
 
-.about ul a {
+.about .personal-info ul li a {
     color: #151720;
     font-weight: bold;
     text-decoration: underline;
@@ -269,7 +284,6 @@ header {
     color: #fff;
     background-color: #f8930f;
     border-radius: 50px;
-
 }
 
 .about a button:hover {
@@ -278,6 +292,7 @@ header {
     transition: .2s ease;
 }
 
+/*---- skills ----*/
 .skills {
     display: flex;
     flex-direction: column;
@@ -286,22 +301,16 @@ header {
     gap: 10rem;
 }
 
-
 .skills .content {
-    min-width: 300px;
-
+    width: 300px;
     height: 450px;
-
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
-.skills .content div {
-    /* padding: 2rem 0; */
-
-    border-radius: 81% 19% 71% 29% / 34% 67% 33% 66%;
+.skills .content .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -312,22 +321,20 @@ header {
     color: #151720;
     background: #f8930f;
     font-size: 2rem;
-
+    border-radius: 81% 19% 71% 29% / 34% 67% 33% 66%;
 }
 
-.skills .content div:hover {
-    border-radius: 34% 66% 32% 68% / 69% 32% 68% 31%;
-}
-
-.skills .content div i {
+.skills .content .skill i {
     font-size: 6rem;
     color: #151720;
 }
 
+.skills .content .skill:hover {
+    border-radius: 34% 66% 32% 68% / 69% 32% 68% 31%;
+}
 
+/*---- projects ----*/
 .projects {
-    /* padding-bottom: 10rem; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,10 +342,9 @@ header {
 }
 
 .projects .heading {
-
     padding: 1rem 6rem;
-    background: #151720;
 
+    background: #151720;
     color: #fff;
     text-decoration: underline
 }
@@ -354,42 +360,60 @@ header {
     margin: 0 auto;
 }
 
+.projects .box-container .box {
+    padding: 1rem;
+
+    border-radius: 5px;
+    background: rgb(248, 147, 15);
+    background: linear-gradient(180deg, rgba(248, 147, 15, 1) 0%, rgba(255, 255, 255, 1) 18%, rgba(255, 253, 251, 1) 60%, rgba(255, 252, 248, 1) 73%, rgba(248, 147, 15, 1) 99%);
+}
+
+.projects .box-container .box .thumbnail {
+    display: flex;
+}
+
+.projects .box-container .box .thumbnail img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
 
 .projects .box-container .box .content {
-    align-self: center;
-    padding: 1rem;
     max-width: 350px;
+    padding: 1.5rem;
+
+    align-self: center;
     text-align: center;
     justify-content: center;
-    margin: 0 auto;
+
     font-size: 1.5rem;
 }
 
 .projects .box-container .box .content .project-heading {
+    margin-bottom: 2rem;
+
     font-size: 2rem;
     color: #151720;
+}
+
+.projects .box-container .box .content .project-heading span a {
+    color: #00a2ff;
     text-decoration: underline;
 }
 
-
-
+/*---- footer ----*/
 footer {
     height: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
     background: #151720;
     color: #f8930f;
-
     font-size: 1.5rem;
-}
-
-footer a {
-    color: #E8D9C5;
-    font-weight: bold;
 }
 
 footer .credits {
@@ -401,39 +425,21 @@ footer .credits {
     align-items: center;
 }
 
-
-/*project*/
-
-.projects .box-container .box {
-
-    padding: 1rem;
-
-    border-radius: 5px;
-    background: rgb(248,147,15);
-    background: linear-gradient(180deg, rgba(248,147,15,1) 0%, rgba(255,255,255,1) 18%, rgba(255,253,251,1) 60%, rgba(255,252,248,1) 73%, rgba(248,147,15,1) 99%);
+footer .credits a {
+    color: #E8D9C5;
+    font-weight: bold;
 }
-
-.projects .box-container .box .thumbnail {
-    display: flex;
-    margin: 0 auto;
-}
-
-.projects .box-container .box .thumbnail img {
-    width: 250px;
-    border-radius: 5px;
-    margin: 0 auto;
-}
-
-
-
 
 /*media queries*/
+@media screen and (min-width: 766px) {
 
-@media screen and (min-width: 766px){
+    .container {
+        width: 80%;
+    }
 
-    /* .home .content .text {
-        width: 85%;
-    } */
+    .heading {
+        font-size: 2.5rem;
+    }
 
     .home .img-wrapper img {
         width: 350px;
@@ -447,53 +453,34 @@ footer .credits {
         font-size: 2.5rem;
     }
 
-    .heading {
-        font-size: 2.5rem;
-    }
-
-    .home .content .button i {
+    .home .content .button a button i {
         font-size: 2rem;
     }
 
-
-    /* .about .resume {
-        width: 85%;
-
-    } */
-
-
     .about .personal-info ul {
+        margin-top: 2rem;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
 
         gap: 4rem;
-
-       
-        margin-top: 2rem;
-
     }
 
     .about .personal-info ul li {
         padding: 1.5rem;
+
         border-bottom: 4px solid #f8930f;
         border-left: 4px solid #f8930f;
-         word-break: keep-all;
-        
-    }
-
-    .container {
-        width: 80%;
     }
 
     .skills .content {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        height: 350px;
         min-width: 550px;
 
-    height: 350px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .skills .content div i {
+    .skills .content .skill i {
         font-size: 7rem;
     }
 
@@ -501,13 +488,9 @@ footer .credits {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-  
 }
 
-
 @media screen and (min-width: 991px) {
-
-  
 
     .navbar {
         max-width: 1200px;
@@ -519,11 +502,11 @@ footer .credits {
         justify-content: center;
     }
 
-    .hamburger {
+    .navbar .hamburger {
         display: none;
     }
 
-    .menu {
+    .navbar .menu {
         height: 0;
         padding: 2rem 1rem;
 
@@ -538,180 +521,99 @@ footer .credits {
         border: none;
     }
 
-    .dark-mode__btn {
-        z-index: 999;
-    }
-
-    .menu li {
+    .navbar .menu li {
         margin-left: 10px;
 
+        font-size: 2rem;
         border: none;
     }
 
-    .menu li:last-child {
+    .navbar .menu li:last-child {
         border-bottom: none;
     }
 
-    .menu li a {
+    .navbar .menu li a {
         padding: 10px 15px;
-
-        display: block;
 
         text-decoration: none;
         transition: .5s ease;
     }
 
     .home {
-        display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-
         gap: 4rem;
 
         position: relative;
-
     }
 
     .home .img-wrapper {
-        border-radius: 15px 15px 200px 15px;
-        -webkit-border-radius: 15px 15px 200px 15px;
-        -moz-border-radius: 15px 15px 200px 15px;
-        border: 4px solid #f8930f;
+        max-width: 450px;
+        height: 500px;
 
-        background-image: url(../images/me-1200.png);
+        background-image: url(../images/desktop-portrait.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
         z-index: 1;
-        left: 40px;
-        top: 40px;
-
-        max-width: 450px;
-        height: 450px;
-
         position: relative;
+        left: 40px;
+
+        border-radius: 5px 5px 100px 100px;
+        border: 4px solid #f8930f;
     }
 
     .home .img-wrapper img {
-        /* display: none; */
         visibility: hidden;
     }
 
     .home .content {
-        display: flex;
-        flex-direction: column;
+        align-items: flex-start;
         gap: 6rem;
     }
 
-    .home .content .text .heading {
-        font-size: 6rem;
-
-
-    }
-
-    .home .content .text p:nth-child(2) {
-        font-size: 3rem;
-    } 
-
     .home .content .text {
-
-        font-size: 2rem;
-        max-width: 650px;
-    }
-
-
-  
-
-    .navbar .menu li {
-        font-size: 2rem;
-    }
-
-    .home .content .button i {
-        font-size: 2.5rem;
-    }
-
-
-    .about {
-        font-size: 2rem;
-
+        align-items: flex-start;
+        text-align: left;
     }
 
     .about .resume {
         width: 80%;
-
-    }
-
-    .heading {
-        font-size: 3.5rem;
-    }
-
-
-    /* .about .personal-info ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        gap: 4rem;
-
-        word-break: break-all;
-        margin-top: 2rem;
-
-    }
-
-    .about .personal-info ul li {
-        padding: 1.5rem;
-        border-bottom: 4px solid #f8930f;
-        border-left: 4px solid #f8930f;
-    } */
-
-    .about a button {
-        font-size: 2rem;
-
-    }
-
-    .about a button i {
-        padding: 3.5rem;
-        font-size: 3.5rem;
     }
 
     .skills .content {
         width: 650px;
         height: 450px;
-    } 
+    }
 
-    .skills .content div i {
+    .skills .content .skill i {
         font-size: 8rem;
     }
 
-
     .projects .box-container {
-        /**/
         width: 100%;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 6rem;
     }
 
     .projects .box-container .box {
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding: 1rem;
+
         display: flex;
         gap: 4rem;
 
-        padding: 1rem;
-
-    border-radius: 5px;
-    border-left: 4px solid #f8930f;
-    padding-left: 1rem;
-    background: #fff;
-    margin: 0 auto;
+        border-radius: 5px;
+        border-left: 4px solid #f8930f;
+        background: #fff;
     }
 
-.projects .box-container .box:hover {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 56%, rgba(248, 147, 15, 1) 100%);
-
-
-}
-
+    .projects .box-container .box:hover {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 56%, rgba(248, 147, 15, 1) 100%);
+    }
 
     .projects .box-container .box:nth-child(odd) {
         grid-column: 2/5;
@@ -721,26 +623,66 @@ footer .credits {
         grid-column: 1/4;
     }
 
+    .projects .box-container .box .thumbnail img {
+        width: 250px;
+
+        border-radius: 5px;
+    }
 
     .projects .box-container .box .content {
-        font-size: 2rem;
         gap: 4rem;
         text-align: justify;
     }
 
-
-
     .projects .box-container .box .content .project-heading {
-        text-decoration: underline;
-        color: #151720;
+        color: rgb(21, 23, 32);
+    }
+}
 
-        margin-bottom: 1rem;
-        font-size: 2.3rem;
+@media screen and (min-width: 1199px) {
+    .heading {
+        font-size: 3.5rem;
     }
 
+    .about {
+        font-size: 2rem;
+    }
 
-    .projects .box-container .box .thumbnail img {
-        width: 250px;
-        border-radius: 5px;
+    .about a button {
+        font-size: 2rem;
+    }
+
+    .about a button i {
+        padding: 3.5rem;
+        font-size: 3.5rem;
+    }
+
+    .home .content .text .heading {
+        font-size: 6rem;
+    }
+
+    .home .content .button a button {
+        padding: 2rem;
+    }
+
+    .home .content .button a button i {
+        font-size: 3rem;
+    }
+
+    .home .content .text {
+        max-width: 650px;
+        font-size: 2rem;
+    }
+
+    .home .content .text p:nth-child(2) {
+        font-size: 3rem;
+    }
+
+    .projects .box-container .box .content {
+        font-size: 2rem;
+    }
+
+    .projects .box-container .box .content .project-heading {
+        font-size: 2.3rem;
     }
 }
